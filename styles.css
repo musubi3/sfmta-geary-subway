@@ -1,0 +1,165 @@
+/* Add this to your styles.css */
+
+#map-container {
+    display: flex;
+    /* Aligns map and legend */
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    background-color: var(--card);
+    box-shadow: 0 2px 6px var(--card-shadow);
+  border: 1px solid var(--card-border);
+    padding: 1.7em 0;
+    border-radius: 1.2%;
+}
+
+/* Styles for the D3 map */
+svg#sf-map {
+    background-color: lightblue;
+    border-radius: 1.2%;
+}
+
+.tract {
+    stroke: #fff;
+    stroke-width: 0.5px;
+}
+
+.tract:hover {
+    stroke: #000;
+    stroke-width: 2px;
+    cursor: pointer;
+}
+
+/* Styles for the tooltip */
+#tooltip {
+    color: var(--text-color);
+    position: absolute;
+    background-color: oklch(from var(--card) l c h / 0.85);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+/* Styles for the legend */
+#legend {
+    display: flex;
+    flex-direction: row; /* Arrange legend items horizontally */
+    margin-top: 20px; /* Space between map and legend */
+    margin-left: 0; /* Remove old margin */
+    flex-shrink: 0;
+}
+
+.legend-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: column; /* Stack color box on top of text */
+    align-items: center;
+    margin: 0 4px; /* Space between items */
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 0; /* Remove old margin */
+    margin-bottom: 5px; /* Add space below box */
+    border: 1px solid #ccc;
+}
+
+.legend-label {
+    font-size: 10px; /* Make text smaller to fit */
+}
+
+/* --- NEW CUSTOM TOGGLE STYLES --- */
+.map-toggles {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.map-toggles label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px; /* Space between switch and text */
+}
+
+/* Hide the default checkbox */
+.map-toggles input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Create the "track" (the background of the switch) */
+.map-toggles .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Width of the track */
+  height: 22px; /* Height of the track */
+}
+
+.map-toggles .switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* "Off" color */
+  border-radius: 22px; /* Make it a pill shape */
+  transition: .4s;
+}
+
+/* Create the "knob" (the circle) */
+.map-toggles .switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Size of the knob */
+  width: 16px;
+  left: 3px; /* "Off" position */
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%; /* Make it a circle */
+  transition: .4s;
+}
+
+/* Style the "on" state */
+.map-toggles input:checked + .switch .switch-slider {
+  background-color: var(--color-accent); /* Dark blue "on" color */
+}
+
+/* Move the knob when "on" */
+.map-toggles input:checked + .switch .switch-slider:before {
+  transform: translateX(18px); /* Move knob to the right */
+}
+
+/* Style for the new BART line */
+.bart-line-generated {
+  stroke: #0099D8; /* Official BART Blue */
+  stroke-width: 2.5px;
+  stroke-opacity: 0.7;
+  fill: none;
+}
+
+/* Style for the new BART station dots */
+.bart-station {
+  fill: white;
+  stroke: #0099D8; /* Dark blue */
+  stroke-width: 1px;
+}
