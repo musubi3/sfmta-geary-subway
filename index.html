@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Lee: 41,000 Riders, Zero Trains</title>
+    <title>Justin Lee: 44,000 Riders, Zero Trains</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
     <div class="content project-detail">
         <header class="project-header">
-            <h1>41,000 Riders, Zero Trains: A Case for the Geary Subway</h1>
+            <h1>44,000 Riders, Zero Trains: A Case for the Geary Subway</h1>
             <div class="project-meta">
                 <p class="project-author">Justin Lee</p>
                 <div class="project-info">
@@ -42,13 +42,45 @@
         <section id="introduction" class="project-section">
             <h2>Introduction</h2>
             <p>
-
+                For tens of thousands of San Franciscans, the 38-Geary bus is an institution. It's the primary transit
+                artery for the entire northwestern side of the city, connecting some of the city's busiest neighborhoods
+                to downtown. The Geary corridor was once the home to San Francisco's first streetcar in 1912, the A and
+                B lines. These lines were decomissioned in 1956 and replaced by the 38-Geary bus line. This project asks
+                a simple question: Is a bus line enough for a corridor of this magnitude?
+            </p>
+            <p>
+                The title of this project, "44,000 Riders, Zero Trains," is the conclusion I reached after a deep-dive
+                analysis of the data. This project makes the data-driven case that the Geary corridor has long outgrown
+                its bus-only infrastructure.
+            </p>
+            <p>
+                The evidence will show that Geary's combination of high population density, high resident transit
+                dependency, and massive ridership demand makes it the most underserved transit corridor in
+                San Francisco.
             </p>
         </section>
 
         <section id="density-map" class="project-section">
             <h2>The Map: A Dense and Transit-Dependent "Rail Desert"</h2>
-
+            <p>
+                The first step in making the case for a new subway is to understand where people live and how they get
+                around. Using data from <a
+                    href="https://censusreporter.org/profiles/14000US06075012502-census-tract-12502-san-francisco-ca">Census
+                    Reporter</a>, <a
+                    href="https://data.sfgov.org/Transportation/Map-of-Muni-Simple-Routes/ubh8-p5ug">DataSF</a>, and <a
+                    href="https://www.bart.gov/schedules/developers/geo">BART</a> this interactive map visualizes two
+                key stories for San Francisco's census tracts.
+            </p>
+            <p>
+                By default, the map shows population density. The story is immediately clear, the bright red/orange
+                spine running through the northwestern part of the city into downtown is the Geary corridor, one of the
+                densest population centers in all of San Francisco.
+            </p>
+            <p>
+                Clicking the "Equity" toggle will switch to an equity map, showing the
+                percentage of households in each tract that have zero vehicles. We can see that the same
+                dense corridor is also home to thousands of households that are highly transit-dependent.
+            </p>
             <div id="map-container">
                 <div class="map-view-toggle">
                     <label>
@@ -85,31 +117,138 @@
                     <div class="legend-title">Population per km²</div>
                 </div>
             </div>
+
+            <p>
+                From this map we can see just how barren the northwestern side of the city is. Other dense corridors
+                such as Market Street and Mission Street are served by both Muni and BART. In stark contrast, the Geary
+                corridor is left with just the 38-Geary, a single line struggling to its growing demand.
+            </p>
         </section>
 
         <section id="ridership-analysis" class="project-section">
             <h2>Ridership: The #1 Most Underserved Corridor</h2>
+            <p>
+                The map gave us a better understanding of where people live, this chart quantifies how many of them are
+                on transit.
+            </p>
+            <p>
+                To create a true apples-to-apples comparison, this chart groups major bus routes into the corridors they
+                serve. Crucially, it combines the ridership of the 14-Mission and 14R-Mission Rapid into a single
+                "Mission Corridor" and adds the ridership from the two BART stations (16th & 24th St.) that serve it.
+                The data for this graph was sourced from <a
+                    href="https://www.sfmta.com/reports/average-daily-muni-boardings-route-and-month-pre-pandemic-present">SFMTA</a>
+                and <a href="https://www.bart.gov/about/reports/ridership">BART</a>.
+            </p>
             <div id="chart-container">
                 <svg id="ridership-chart"></svg>
             </div>
+            <p>
+                The data is staggering. The Mission corridor serves 46,230 people daily. That number is not even
+                including the BART ridership and 49 Van Ness/Mission, that both partially serve the Mission corridor.
+                All together they have 93,960 daily riders, appropriately served by three major bus lines and a
+                heavy-rail subway.
+            </p>
+            <p>
+                The Geary corridor is also in a league of its own as the clear #2 when it comes to bus demand, with over
+                44,000 daily riders. Despite its clear #2 status Geary does not have any form of rail along its corridor
+                whatsoever unlike the Mission corridor. Geary's massive, bus-only demand is a clear indication that rail
+                would be beneficial for this corridor.
+            </p>
         </section>
 
         <section id="ridership-trends" class="project-section">
             <h2>Trends: A Strong and Resilient Demand</h2>
+            <p>
+                A common counter-argument to new transit projects in the U.S. is the post-pandemic decline in ridership.
+                The chart below addresses that concern directly by tracking the average weekday ridership for San
+                Francisco's busiest bus corridors from 2019 to 2025 with data provided by <a
+                    href="https://www.sfmta.com/reports/average-daily-muni-boardings-route-and-month-pre-pandemic-present">SFMTA</a>.
+            </p>
             <div id="line-chart-container">
                 <svg id="ridership-line-chart"></svg>
             </div>
+            <p>
+                In 2019, the Geary Corridor (blue) was in a class of its own, leading all other bus corridors with over
+                53,000 daily riders. While it has fallen to the 2nd most ridden bus corridor, it is on pace to reclaim
+                its throne as the busiest bus corridor in San Francisco.
+            </p>
+            <p>
+                This chart proves that the demand on Geary is not a temporary spike, it is a permanent and resilient
+                feature of the city's transit landscape. The 44,000+ daily riders are not an anomaly, they are part of a
+                strong recovery back to a pre-pandemic norm that was already overwhelming for a bus-only system.
+            </p>
         </section>
 
         <section id="crowding-analysis" class="project-section">
             <h2>Crowding: A System at Its Breaking Point</h2>
+            <p>
+                The previous charts established that the Geary corridor has massive, resilient demand. This
+                visualization aims to answer the most important question, "so what?"
+            </p>
+            <p>
+                The data for this graph is once again from <a
+                    href="https://www.sfmta.com/reports/percent-daily-muni-trips-crowded-route-and-month">SFMTA</a>.
+                Crowded is defined as when "vehicles are above capacity for 10% or more of the stops."
+                This chart illustrates the human cost of that demand, the passenger "pain point." It shows the Max Peak
+                Crowding for the city's top 15 bus routes, calculated by finding the average percentage of trips that
+                are at the official crowding threshold during their single busiest commute (either AM inbound or PM
+                outbound).
+            </p>
             <div id="crowding-chart-container">
                 <svg id="crowding-chart"></svg>
             </div>
+            <p>
+                The 38R Geary Rapid is the 3rd most crowded route in all of San Francisco, with over 21% of its
+                peak-commute trips being over capacity. This proves that the current bus system is failing to meet
+                the corridor's immense demand.
+            </p>
+            <p>
+                A Geary subway could help alleviate this strain on the 38 bus line while also relieving some stress from
+                the 1-California line too. The 1-California and 38-Geary are both East-West running lines that have a
+                lot amongst
+                overlap for the communities they serve.
+            </p>
         </section>
 
         <section id="conclusion" class="project-section">
             <h2>Conclusion</h2>
+            <p>When viewed together the data provides an undeniable story.</p>
+            <p>
+                First, the <a href="#density-map">Density & Equity Map</a> established a clear geospatial problem, a
+                "rail desert" in the
+                northwestern quadrant of the city, which is simultaneously one of the densest and most transit-dependent
+                areas in San Francisco yet to be served by rail.
+            </p>
+            <p>
+                Next, the <a href="#ridership-analysis">Ridership Analysis</a> quantified this problem. It proved that
+                the Geary corridor is the #1 most
+                underserved
+                corridor in the city. Its 44,250 daily bus-only riders rivals the Mission corridor, but unlike the
+                Mission corridor it isn't also served by a rail line.
+            </p>
+            <p>
+                Then, the <a href="#ridership-trends">Ridership Trends</a> chart rebutted any counter-arguments about
+                the pandemic. It showed that
+                Geary's massive demand is not a temporary spike, it's a resilient, structural trend that was massive
+                pre-pandemic (53,000+ daily riders) and is recovering fast and will soon reach or even surpass its
+                pre-pandemic demand.
+            </p>
+            <p>
+                Lastly, the <a href="#crowding-analysis">Crowding Analysis</a> provided the "smoking gun." The 38R Geary
+                Rapid is one of the top 3 most
+                crowded bus lines in the city, proving that the current infrastructure is at its breaking point and is
+                failing to provide adequate service for its passengers.
+            </p>
+            <p>
+                The 38-Geary is not just a "busy bus line." The data proves it's a high-capacity rail line in disguise,
+                forced to operate with the infrastructure of a local route. The conclusion is clear, the 44,250 daily
+                riders and the thousands more who are discouraged by the current system's crowding are being
+                underserved. This isn't just an inconvenience, it's an equity issue. The data shows the demand is
+                there, the demand is resilient, and the current system is failing. The best time to build the subway was
+                50 years ago. The second-best time is now. It's time to build the subway, it's time for the <a
+                    href="https://www.sfmta.com/blog/today-history-geary-then-and-now">B-Geary</a> to
+                run along Geary once again.
+            </p>
         </section>
     </div>
 </body>
