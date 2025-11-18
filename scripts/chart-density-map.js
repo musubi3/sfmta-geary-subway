@@ -1,18 +1,13 @@
-/* Add this to your main.js */
-
-// Wait for the DOM to be fully loaded before running D3 code
-window.addEventListener('DOMContentLoaded', () => {
-
-    // Use an async function for easy data loading
+export async function drawDensityMap() {
     (async () => {
 
         // --- 1. Load Data ---
-        const geoJsonFile = "data/sf_tracts_with_density.geojson";
-        const waterFile = "data/sf_water.geojson";
-        const landFile = "data/sf_county_boundary.geojson";
-        const gearyRouteFile = "data/geary_route.geojson";
-        const railFile = "data/sfmta_rail_lines.geojson"; // (Using your correct filename)
-        const bartStationsFile = "data/sf_bart_stations.geojson";
+        const geoJsonFile = "../data/sf_tracts_with_density.geojson";
+        const waterFile = "../data/sf_water.geojson";
+        const landFile = "../data/sf_county_boundary.geojson";
+        const gearyRouteFile = "../data/geary_route.geojson";
+        const railFile = "../data/sfmta_rail_lines.geojson";
+        const bartStationsFile = "../data/sf_bart_stations.geojson";
 
         let sfData, waterData, landData, gearyRouteData, railData, bartStationsData;
         try {
@@ -53,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // --- 5. Prepare BART Line Data (NEW) ---
         // Manually define the order of stations from north to south
         const bartLineOrder = [
+            "West Oakland",
             "Embarcadero",
             "Montgomery St",
             "Powell St",
@@ -60,7 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
             "16th St/Mission",
             "24th St/Mission",
             "Glen Park",
-            "Balboa Park"
+            "Balboa Park",
+            "Daly City"
         ];
 
         // Create a lookup Map for easy access
@@ -245,5 +242,4 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
     })(); // End of async function
-
-}); // End of DOMContentLoaded
+}

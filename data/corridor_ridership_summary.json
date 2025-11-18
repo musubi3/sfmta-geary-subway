@@ -1,0 +1,72 @@
+[
+  {
+    "Corridor": "Mission Corridor",
+    "Bus_Ridership": 46316.666666666664,
+    "BART_Ridership": 12690,
+    "Total_Ridership": 59006.666666666664,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "49 Van Ness/Mission",
+    "Bus_Ridership": 33925.0,
+    "BART_Ridership": 12690,
+    "Total_Ridership": 46615.0,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "Geary Corridor",
+    "Bus_Ridership": 41808.33333333333,
+    "BART_Ridership": 0,
+    "Total_Ridership": 41808.33333333333,
+    "Highlight": "Geary Corridor"
+  },
+  {
+    "Corridor": "22 Fillmore",
+    "Bus_Ridership": 21783.333333333332,
+    "BART_Ridership": 0,
+    "Total_Ridership": 21783.333333333332,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "8 Bayshore",
+    "Bus_Ridership": 17758.333333333332,
+    "BART_Ridership": 0,
+    "Total_Ridership": 17758.333333333332,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "1 California",
+    "Bus_Ridership": 17408.333333333332,
+    "BART_Ridership": 0,
+    "Total_Ridership": 17408.333333333332,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "30 Stockton",
+    "Bus_Ridership": 16391.666666666668,
+    "BART_Ridership": 0,
+    "Total_Ridership": 16391.666666666668,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "29 Sunset",
+    "Bus_Ridership": 15400.0,
+    "BART_Ridership": 0,
+    "Total_Ridership": 15400.0,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "44 O'Shaughnessy",
+    "Bus_Ridership": 12241.666666666666,
+    "BART_Ridership": 0,
+    "Total_Ridership": 12241.666666666666,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "7 Haight/Noriega",
+    "Bus_Ridership": 10958.333333333334,
+    "BART_Ridership": 0,
+    "Total_Ridership": 10958.333333333334,
+    "Highlight": "Other Corridors"
+  }
+]
