@@ -117,7 +117,7 @@ export async function drawRidershipChart() {
             .attr("x", width / 2)
             .attr("y", height + margin.bottom - 3)
             .attr("text-anchor", "middle")
-            .text("Average Daily Weekday Ridership (2024)");
+            .text("Average Daily Weekday Ridership (2025)");
 
         // 13. Add Chart Legend
         const legend = svg.append("g")

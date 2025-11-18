@@ -1,72 +1,72 @@
 [
   {
     "Corridor": "Mission Corridor",
-    "Bus_Ridership": 46316.666666666664,
+    "Bus_Ridership": 46230.0,
     "BART_Ridership": 12690,
-    "Total_Ridership": 59006.666666666664,
+    "Total_Ridership": 58920.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "49 Van Ness/Mission",
-    "Bus_Ridership": 33925.0,
+    "Bus_Ridership": 35040.0,
     "BART_Ridership": 12690,
-    "Total_Ridership": 46615.0,
+    "Total_Ridership": 47730.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "Geary Corridor",
-    "Bus_Ridership": 41808.33333333333,
+    "Bus_Ridership": 44250.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 41808.33333333333,
+    "Total_Ridership": 44250.0,
     "Highlight": "Geary Corridor"
   },
   {
     "Corridor": "22 Fillmore",
-    "Bus_Ridership": 21783.333333333332,
+    "Bus_Ridership": 22490.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 21783.333333333332,
-    "Highlight": "Other Corridors"
-  },
-  {
-    "Corridor": "8 Bayshore",
-    "Bus_Ridership": 17758.333333333332,
-    "BART_Ridership": 0,
-    "Total_Ridership": 17758.333333333332,
+    "Total_Ridership": 22490.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "1 California",
-    "Bus_Ridership": 17408.333333333332,
+    "Bus_Ridership": 18620.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 17408.333333333332,
+    "Total_Ridership": 18620.0,
     "Highlight": "Other Corridors"
   },
   {
-    "Corridor": "30 Stockton",
-    "Bus_Ridership": 16391.666666666668,
+    "Corridor": "8 Bayshore",
+    "Bus_Ridership": 18240.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 16391.666666666668,
+    "Total_Ridership": 18240.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "29 Sunset",
-    "Bus_Ridership": 15400.0,
+    "Bus_Ridership": 15940.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 15400.0,
+    "Total_Ridership": 15940.0,
+    "Highlight": "Other Corridors"
+  },
+  {
+    "Corridor": "30 Stockton",
+    "Bus_Ridership": 15530.0,
+    "BART_Ridership": 0,
+    "Total_Ridership": 15530.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "44 O'Shaughnessy",
-    "Bus_Ridership": 12241.666666666666,
+    "Bus_Ridership": 12740.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 12241.666666666666,
+    "Total_Ridership": 12740.0,
     "Highlight": "Other Corridors"
   },
   {
     "Corridor": "7 Haight/Noriega",
-    "Bus_Ridership": 10958.333333333334,
+    "Bus_Ridership": 12190.0,
     "BART_Ridership": 0,
-    "Total_Ridership": 10958.333333333334,
+    "Total_Ridership": 12190.0,
     "Highlight": "Other Corridors"
   }
 ]
