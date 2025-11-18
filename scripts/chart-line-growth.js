@@ -42,7 +42,7 @@ export async function drawRidershipLineChart() {
             .attr("x", 0 - (height / 2))
             .attr("dy", "1em")
             .style("text-anchor", "middle")
-            .text("Avg. Daily Weekday Ridership");
+            .text("Average Daily Weekday Ridership");
 
         const line = d3.line()
             .x(d => xScale(d.year))
