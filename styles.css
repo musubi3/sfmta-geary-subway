@@ -333,3 +333,31 @@ svg#sf-map {
 .map-view-toggle label span:hover {
   background-color: color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 75%);
 }
+
+/* --- Crowding Chart Styles --- */
+#crowding-chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: var(--card);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  border: 1px solid var(--card-border);
+  padding: 2em 0;
+  border-radius: 8px;
+}
+
+#crowding-chart {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+#sf-map,
+#ridership-chart,
+#ridership-line-chart,
+#crowding-chart {
+    max-width: 800px; /* Stops them from getting huge on desktop */
+}

@@ -1,21 +1,22 @@
-// --- NEW FUNCTION TO DRAW THE BAR CHART ---
 export async function drawRidershipChart() {
     try {
         // 1. Load the new summary data
         const data = await d3.json("../data/corridor_ridership_summary.json");
 
-        // 2. Define chart dimensions and margins
+        // 2. Define chart dimensions and margins (UPDATED)
+        const baseWidth = 800;
+        const baseHeight = 500;
         const margin = { top: 20, right: 30, bottom: 50, left: 120 };
-        const width = 800 - margin.left - margin.right;
-        const height = 500 - margin.top - margin.bottom;
+        const width = baseWidth - margin.left - margin.right;
+        const height = baseHeight - margin.top - margin.bottom;
 
-        // 3. Create the SVG container
+        // 3. Create the SVG container (UPDATED)
         const svg = d3.select("#ridership-chart")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("viewBox", `0 0 ${baseWidth} ${baseHeight}`)
+            .attr("preserveAspectRatio", "xMidYMid meet")
             .append("g")
             .attr("transform", `translate(${margin.left},${margin.top})`);
-            
+
         // 4. Select the Tooltip
         const tooltip = d3.select("#tooltip");
 
@@ -43,7 +44,7 @@ export async function drawRidershipChart() {
 
         const colorScale = d3.scaleOrdinal()
             .domain(stackKeys)
-            .range(["#aaa", "#0099D8"]) // Gray for Bus, BART Blue for BART
+            .range(["#aaa", "#0099D8"])
             .unknown("#ccc");
 
         // 8. Transpose data for corridor grouping
@@ -57,19 +58,16 @@ export async function drawRidershipChart() {
             };
         });
 
-        // --- 9. Define Tooltip Handlers (CORRECTED) ---
+        // 9. Define Tooltip Handlers
         const handleMouseOver = (event, d) => {
-            // 'd' is the segment: [startValue, endValue, data: {...}]
             const corridor = d.data.Corridor;
-            const value = d[1] - d[0]; // Calculate the value of this *specific* bar
-            
-            // Determine if this is Bus or BART
-            // This is a small hack: if the value is 0, it must be the BART segment for a bus-only route.
-            let key = "Bus_Ridership"; // Default to Bus
+            const value = d[1] - d[0];
+
+            let key = "Bus_Ridership";
             if (value === d.data.BART_Ridership || (value === 0 && d.data.BART_Ridership === 0)) {
-                 key = "BART_Ridership";
+                key = "BART_Ridership";
             }
-            
+
             tooltip
                 .style("opacity", 1)
                 .style("left", (event.pageX + 10) + "px")
@@ -83,31 +81,31 @@ export async function drawRidershipChart() {
         const handleMouseLeave = () => {
             tooltip.style("opacity", 0);
         };
-              
-        // --- 10. Draw the stacked bars ---
+
+        // 10. Draw the stacked bars
         const corridorGroup = svg.append("g")
             .selectAll("g")
-            .data(corridorData) 
+            .data(corridorData)
             .join("g")
-            .attr("class", "corridor-group") 
+            .attr("class", "corridor-group")
             .attr("transform", d => `translate(0, ${yScale(d.corridor)})`);
 
         corridorGroup.selectAll("rect")
-            .data(d => d.segments) 
+            .data(d => d.segments)
             .join("rect")
             .attr("x", d => xScale(d[0]))
             .attr("width", d => xScale(d[1]) - xScale(d[0]))
             .attr("height", yScale.bandwidth())
             .attr("fill", (d, i) => colorScale(stackKeys[i]))
-            .on("mouseover", handleMouseOver) // 'd' is the segment
+            .on("mouseover", handleMouseOver)
             .on("mouseleave", handleMouseLeave);
 
-        // --- 11. Add Y-axis ---
+        // 11. Add Y-axis
         svg.append("g")
             .attr("class", "axis")
             .call(d3.axisLeft(yScale));
 
-        // --- 12. Add X-axis ---
+        // 12. Add X-axis
         svg.append("g")
             .attr("class", "axis")
             .attr("transform", `translate(0,${height})`)
@@ -117,13 +115,13 @@ export async function drawRidershipChart() {
         svg.append("text")
             .attr("class", "axis-title")
             .attr("x", width / 2)
-            .attr("y", height + margin.bottom - 3) // Positioned inside margin
+            .attr("y", height + margin.bottom - 3)
             .attr("text-anchor", "middle")
             .text("Average Daily Weekday Ridership (2024)");
 
-        // --- 13. Add Chart Legend ---
+        // 13. Add Chart Legend
         const legend = svg.append("g")
-            .attr("transform", `translate(0, -20)`); 
+            .attr("transform", `translate(0, -20)`);
 
         legend.selectAll("rect")
             .data(stackKeys)
@@ -139,8 +137,8 @@ export async function drawRidershipChart() {
             .join("text")
             .attr("class", "chart-legend")
             .attr("x", (d, i) => i * 100 + 20)
-            .attr("y", 13) 
-            .text(d => (d === "Bus_Ridership" ? "Muni Bus" : "16th/24th Mission BART"));
+            .attr("y", 13)
+            .text(d => (d === "Bus_Ridership" ? "Muni Bus" : "BART"));
 
     } catch (error) {
         console.error("Error drawing ridership chart:", error);

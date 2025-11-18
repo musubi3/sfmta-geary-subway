@@ -1,0 +1,77 @@
+[
+  {
+    "ROUTE_NAME": "1 California",
+    "Max_Peak_Crowding_Prc": 29.0,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "45 Union",
+    "Max_Peak_Crowding_Prc": 13.416666666666666,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "38R Geary Rapid",
+    "Max_Peak_Crowding_Prc": 12.166666666666666,
+    "Highlight": "Geary Route"
+  },
+  {
+    "ROUTE_NAME": "5 Fulton",
+    "Max_Peak_Crowding_Prc": 10.25,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "44 O'Shaughnessy",
+    "Max_Peak_Crowding_Prc": 9.833333333333334,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "28 19th Avenue",
+    "Max_Peak_Crowding_Prc": 9.666666666666666,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "49 Van Ness",
+    "Max_Peak_Crowding_Prc": 8.583333333333334,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "29 Sunset",
+    "Max_Peak_Crowding_Prc": 7.916666666666667,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "2  Sutter",
+    "Max_Peak_Crowding_Prc": 7.083333333333333,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "22 Fillmore",
+    "Max_Peak_Crowding_Prc": 5.833333333333333,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "S Shuttle",
+    "Max_Peak_Crowding_Prc": 5.75,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "N Judah",
+    "Max_Peak_Crowding_Prc": 5.083333333333333,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "28R 19th Avenue Rapid",
+    "Max_Peak_Crowding_Prc": 5.083333333333333,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "24 Divisadero",
+    "Max_Peak_Crowding_Prc": 4.833333333333333,
+    "Highlight": "Other Route"
+  },
+  {
+    "ROUTE_NAME": "14R Mission Rapid",
+    "Max_Peak_Crowding_Prc": 4.5,
+    "Highlight": "Other Route"
+  }
+]
