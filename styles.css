@@ -1,4 +1,21 @@
-/* Add this to your styles.css */
+/* ANIMATIONS */
+.content>* {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.content .project-header { animation-delay: 0.2s; }
+.content .project-toc { animation-delay: 0.4s; }
+.content .project-section { animation-delay: 0.5s; }
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 #map-container {
   display: flex;
@@ -13,7 +30,6 @@
   border-radius: 8px;
 }
 
-/* Styles for the D3 map */
 svg#sf-map {
   background-color: lightblue;
   border-radius: 8px;
@@ -30,7 +46,6 @@ svg#sf-map {
   cursor: pointer;
 }
 
-/* Styles for the tooltip */
 #tooltip {
   color: var(--text-color);
   position: absolute;
@@ -46,15 +61,11 @@ svg#sf-map {
   z-index: 10;
 }
 
-/* Styles for the legend */
 #legend {
   display: flex;
   flex-direction: row;
-  /* Arrange legend items horizontally */
   margin-top: 20px;
-  /* Space between map and legend */
   margin-left: 0;
-  /* Remove old margin */
   flex-shrink: 0;
 }
 
@@ -67,28 +78,22 @@ svg#sf-map {
 .legend-item {
   display: flex;
   flex-direction: column;
-  /* Stack color box on top of text */
   align-items: center;
   margin: 0 4px;
-  /* Space between items */
 }
 
 .legend-color {
   width: 20px;
   height: 20px;
   margin-right: 0;
-  /* Remove old margin */
   margin-bottom: 5px;
-  /* Add space below box */
   border: 1px solid #ccc;
 }
 
 .legend-label {
   font-size: 10px;
-  /* Make text smaller to fit */
 }
 
-/* --- NEW CUSTOM TOGGLE STYLES --- */
 .map-toggles {
   margin-bottom: 2em;
   display: flex;
@@ -103,10 +108,8 @@ svg#sf-map {
   align-items: center;
   cursor: pointer;
   gap: 8px;
-  /* Space between switch and text */
 }
 
-/* Hide the default checkbox */
 .map-toggles input[type="checkbox"] {
   opacity: 0;
   width: 0;
@@ -114,14 +117,11 @@ svg#sf-map {
   position: absolute;
 }
 
-/* Create the "track" (the background of the switch) */
 .map-toggles .switch {
   position: relative;
   display: inline-block;
   width: 40px;
-  /* Width of the track */
   height: 22px;
-  /* Height of the track */
 }
 
 .map-toggles .switch-slider {
@@ -132,58 +132,43 @@ svg#sf-map {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  /* "Off" color */
   border-radius: 22px;
-  /* Make it a pill shape */
   transition: .4s;
 }
 
-/* Create the "knob" (the circle) */
 .map-toggles .switch-slider:before {
   position: absolute;
   content: "";
   height: 16px;
-  /* Size of the knob */
   width: 16px;
   left: 3px;
-  /* "Off" position */
   bottom: 3px;
   background-color: white;
   border-radius: 50%;
-  /* Make it a circle */
   transition: .4s;
 }
 
-/* Style the "on" state */
 .map-toggles input:checked+.switch .switch-slider {
   background-color: var(--color-accent);
-  /* Dark blue "on" color */
 }
 
-/* Move the knob when "on" */
 .map-toggles input:checked+.switch .switch-slider:before {
   transform: translateX(18px);
-  /* Move knob to the right */
 }
 
-/* Style for the new BART line */
 .bart-line-generated {
   stroke: #0099D8;
-  /* Official BART Blue */
   stroke-width: 2.5px;
   stroke-opacity: 0.7;
   fill: none;
 }
 
-/* Style for the new BART station dots */
 .bart-station {
   fill: white;
   stroke: #0099D8;
-  /* Dark blue */
   stroke-width: 1px;
 }
 
-/* --- Ridership Chart Styles --- */
 #chart-container {
   display: flex;
   justify-content: center;
@@ -199,37 +184,30 @@ svg#sf-map {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Style for the bars */
 .corridor-group {
   opacity: 0.9;
   transition: opacity 0.2s;
 }
 
-/* On chart hover, fade ALL groups */
 #ridership-chart:hover .corridor-group {
   opacity: 0.5;
 }
 
-/* Highlight ONLY the group being hovered */
 #ridership-chart:hover .corridor-group:hover {
   opacity: 1;
 }
 
-/* Style for the chart axes */
 .axis .domain {
   stroke: none;
-  /* Hide axis lines */
 }
 
 .axis .tick line {
   stroke: #e0e0e0;
-  /* Light gray tick lines */
 }
 
 .axis .tick text {
   font-size: 11px;
   fill: var(--text-color);
-  /* Gray text */
 }
 
 .axis-title {
@@ -243,7 +221,6 @@ svg#sf-map {
   fill: var(--text-color);
 }
 
-/* --- Ridership Line Chart Styles --- */
 #line-chart-container {
   display: flex;
   justify-content: center;
@@ -252,7 +229,6 @@ svg#sf-map {
   box-shadow: 0 2px 6px var(--card-shadow);
   border: 1px solid var(--card-border);
   padding: 2em 0;
-  /* Add some padding */
   border-radius: 8px;
 }
 
@@ -263,7 +239,6 @@ svg#sf-map {
 .line-chart-legend {
   font-size: 13px;
   cursor: pointer;
-  /* To show it's clickable */
 }
 
 .line-chart-legend .legend-label {
@@ -287,31 +262,27 @@ svg#sf-map {
   stroke-opacity: 0.1;
 }
 
-/* --- Map View Toggle Styles (REVISED) --- */
 .map-view-toggle {
   display: flex;
   margin-bottom: 1.5em;
   border: 1px solid var(--card-border);
    box-shadow: 0 2px 6px var(--card-shadow);
   border-radius: 8px;
-  overflow: hidden; /* To get the rounded corners */
+  overflow: hidden; 
 }
 
-/* Hide the radio button */
 .map-view-toggle input[type="radio"] {
   display: none;
 }
 
-/* This is the label, but it's just a container now */
 .map-view-toggle label {
-  display: block; /* Let the span inside control the layout */
+  display: block; 
   border-left: 1px solid var(--card-border);
 }
 .map-view-toggle label:first-child {
-  border-left: none; /* No divider for the first item */
+  border-left: none; 
 }
 
-/* This is the new button style */
 .map-view-toggle label span {
   display: block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -324,7 +295,6 @@ svg#sf-map {
   transition: background-color 0.2s, color 0.2s;
 }
 
-/* Style for the selected button */
 .map-view-toggle input[type="radio"]:checked + span {
   background-color: var(--color-accent);
   color: black;
@@ -334,7 +304,6 @@ svg#sf-map {
   background-color: color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 75%);
 }
 
-/* --- Crowding Chart Styles --- */
 #crowding-chart-container {
   display: flex;
   justify-content: center;
@@ -359,5 +328,5 @@ svg {
 #ridership-chart,
 #ridership-line-chart,
 #crowding-chart {
-    max-width: 800px; /* Stops them from getting huge on desktop */
+    max-width: 800px; 
 }
