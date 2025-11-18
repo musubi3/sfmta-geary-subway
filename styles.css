@@ -2,22 +2,21 @@
 
 #map-container {
   display: flex;
-  /* Aligns map and legend */
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;    
   margin-top: 20px;
   flex-wrap: wrap;
   background-color: var(--card);
   box-shadow: 0 2px 6px var(--card-shadow);
   border: 1px solid var(--card-border);
   padding: 1.7em 0;
-  border-radius: 1.2%;
+  border-radius: 8px;
 }
 
 /* Styles for the D3 map */
 svg#sf-map {
   background-color: lightblue;
-  border-radius: 1.2%;
+  border-radius: 8px;
 }
 
 .tract {
@@ -193,7 +192,7 @@ svg#sf-map {
   box-shadow: 0 2px 6px var(--card-shadow);
   border: 1px solid var(--card-border);
   padding: 2em 0;
-  border-radius: 1.2%;
+  border-radius: 8px;
 }
 
 #ridership-chart {
@@ -202,18 +201,18 @@ svg#sf-map {
 
 /* Style for the bars */
 .corridor-group {
-    opacity: 0.9;
-    transition: opacity 0.2s;
+  opacity: 0.9;
+  transition: opacity 0.2s;
 }
 
 /* On chart hover, fade ALL groups */
 #ridership-chart:hover .corridor-group {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* Highlight ONLY the group being hovered */
 #ridership-chart:hover .corridor-group:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Style for the chart axes */
@@ -242,4 +241,95 @@ svg#sf-map {
 .chart-legend {
   font-size: 13px;
   fill: var(--text-color);
+}
+
+/* --- Ridership Line Chart Styles --- */
+#line-chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: var(--card);
+  box-shadow: 0 2px 6px var(--card-shadow);
+  border: 1px solid var(--card-border);
+  padding: 2em 0;
+  /* Add some padding */
+  border-radius: 8px;
+}
+
+#ridership-line-chart {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.line-chart-legend {
+  font-size: 13px;
+  cursor: pointer;
+  /* To show it's clickable */
+}
+
+.line-chart-legend .legend-label {
+  opacity: 1;
+  transition: opacity 0.2s;
+  fill: var(--text-color);
+}
+
+.line-chart-legend .legend-label.faded {
+  opacity: 0.3;
+}
+
+.line-path {
+  fill: none;
+  stroke-width: 3px;
+  stroke-opacity: 0.9;
+  transition: stroke-opacity 0.2s;
+}
+
+.line-path.faded {
+  stroke-opacity: 0.1;
+}
+
+/* --- Map View Toggle Styles (REVISED) --- */
+.map-view-toggle {
+  display: flex;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--card-border);
+   box-shadow: 0 2px 6px var(--card-shadow);
+  border-radius: 8px;
+  overflow: hidden; /* To get the rounded corners */
+}
+
+/* Hide the radio button */
+.map-view-toggle input[type="radio"] {
+  display: none;
+}
+
+/* This is the label, but it's just a container now */
+.map-view-toggle label {
+  display: block; /* Let the span inside control the layout */
+  border-left: 1px solid var(--card-border);
+}
+.map-view-toggle label:first-child {
+  border-left: none; /* No divider for the first item */
+}
+
+/* This is the new button style */
+.map-view-toggle label span {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: var(--card);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Style for the selected button */
+.map-view-toggle input[type="radio"]:checked + span {
+  background-color: var(--color-accent);
+  color: black;
+}
+
+.map-view-toggle label span:hover {
+  background-color: color-mix(in oklch, var(--color-accent, oklch(65% 50% 200)), canvas 75%);
 }

@@ -1,0 +1,200 @@
+[
+  {
+    "corridor": "1 California",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 22716
+      },
+      {
+        "year": 2020,
+        "ridership": 9375
+      },
+      {
+        "year": 2021,
+        "ridership": 10100
+      },
+      {
+        "year": 2022,
+        "ridership": 13783
+      },
+      {
+        "year": 2023,
+        "ridership": 15816
+      },
+      {
+        "year": 2024,
+        "ridership": 17408
+      },
+      {
+        "year": 2025,
+        "ridership": 18620
+      }
+    ]
+  },
+  {
+    "corridor": "22 Fillmore",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 17758
+      },
+      {
+        "year": 2020,
+        "ridership": 10158
+      },
+      {
+        "year": 2021,
+        "ridership": 11775
+      },
+      {
+        "year": 2022,
+        "ridership": 16741
+      },
+      {
+        "year": 2023,
+        "ridership": 19625
+      },
+      {
+        "year": 2024,
+        "ridership": 21783
+      },
+      {
+        "year": 2025,
+        "ridership": 22490
+      }
+    ]
+  },
+  {
+    "corridor": "49 Van Ness/Mission",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 24450
+      },
+      {
+        "year": 2020,
+        "ridership": 14183
+      },
+      {
+        "year": 2021,
+        "ridership": 15266
+      },
+      {
+        "year": 2022,
+        "ridership": 23791
+      },
+      {
+        "year": 2023,
+        "ridership": 30991
+      },
+      {
+        "year": 2024,
+        "ridership": 33925
+      },
+      {
+        "year": 2025,
+        "ridership": 35040
+      }
+    ]
+  },
+  {
+    "corridor": "8 Bayshore",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 22591
+      },
+      {
+        "year": 2020,
+        "ridership": 14308
+      },
+      {
+        "year": 2021,
+        "ridership": 14766
+      },
+      {
+        "year": 2022,
+        "ridership": 17325
+      },
+      {
+        "year": 2023,
+        "ridership": 16950
+      },
+      {
+        "year": 2024,
+        "ridership": 17758
+      },
+      {
+        "year": 2025,
+        "ridership": 18240
+      }
+    ]
+  },
+  {
+    "corridor": "Geary Corridor",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 53308
+      },
+      {
+        "year": 2020,
+        "ridership": 24541
+      },
+      {
+        "year": 2021,
+        "ridership": 24283
+      },
+      {
+        "year": 2022,
+        "ridership": 32375
+      },
+      {
+        "year": 2023,
+        "ridership": 37966
+      },
+      {
+        "year": 2024,
+        "ridership": 41808
+      },
+      {
+        "year": 2025,
+        "ridership": 44250
+      }
+    ]
+  },
+  {
+    "corridor": "Mission Corridor",
+    "values": [
+      {
+        "year": 2019,
+        "ridership": 48233
+      },
+      {
+        "year": 2020,
+        "ridership": 29533
+      },
+      {
+        "year": 2021,
+        "ridership": 33575
+      },
+      {
+        "year": 2022,
+        "ridership": 37875
+      },
+      {
+        "year": 2023,
+        "ridership": 44075
+      },
+      {
+        "year": 2024,
+        "ridership": 46316
+      },
+      {
+        "year": 2025,
+        "ridership": 46230
+      }
+    ]
+  }
+]

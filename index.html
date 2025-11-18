@@ -33,6 +33,7 @@
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#density-map">Density Map</a></li>
                 <li><a href="#ridership-analysis">Ridership Analysis</a></li>
+                <li><a href="#ridership-trends">Ridership Trends</a></li>
             </ul>
         </nav>
 
@@ -47,6 +48,17 @@
             <h2>Density Map</h2>
 
             <div id="map-container">
+                <div class="map-view-toggle">
+                    <label>
+                        <input type="radio" name="map-view" id="toggle-view-density" value="density" checked>
+                        <span>Density</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="map-view" id="toggle-view-equity" value="equity">
+                        <span>Equity</span>
+                    </label>
+                </div>
+
                 <div class="map-toggles">
                     <label>
                         <input type="checkbox" id="toggle-geary" checked>
@@ -77,6 +89,13 @@
             <h2>Ridership Analysis</h2>
             <div id="chart-container">
                 <svg id="ridership-chart"></svg>
+            </div>
+        </section>
+
+        <section id="ridership-trends" class="project-section">
+            <h2>Ridership Trends</h2>
+            <div id="line-chart-container">
+                <svg id="ridership-line-chart"></svg>
             </div>
         </section>
     </div>
