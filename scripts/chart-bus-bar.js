@@ -138,7 +138,7 @@ export async function drawRidershipChart() {
             .attr("class", "chart-legend")
             .attr("x", (d, i) => i * 100 + 20)
             .attr("y", 13)
-            .text(d => (d === "Bus_Ridership" ? "Muni Bus" : "BART"));
+            .text(d => (d === "Bus_Ridership" ? "Muni Bus" : "16th/24th Mission BART"));
 
     } catch (error) {
         console.error("Error drawing ridership chart:", error);
