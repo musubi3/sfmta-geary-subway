@@ -1,6 +1,6 @@
 export async function drawRidershipLineChart() {
     try {
-        const data = await d3.json("../data/corridor_growth_data.json");
+        const data = await d3.json("data/corridor_growth_data.json");
         const baseWidth = 800;
         const baseHeight = 500;
         const margin = { top: 30, right: 30, bottom: 50, left: 80 };

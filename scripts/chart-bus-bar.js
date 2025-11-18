@@ -1,7 +1,7 @@
 export async function drawRidershipChart() {
     try {
         // 1. Load the new summary data
-        const data = await d3.json("../data/corridor_ridership_summary.json");
+        const data = await d3.json("data/corridor_ridership_summary.json");
 
         // 2. Define chart dimensions and margins (UPDATED)
         const baseWidth = 800;

@@ -1,7 +1,7 @@
 export async function drawCrowdingChart() {
     try {
         // 1. Load the new summary data
-        const data = await d3.json("../data/corridor_crowding_peak.json");
+        const data = await d3.json("data/corridor_crowding_peak.json");
 
         // 2. Define chart dimensions and margins (UPDATED)
         const baseWidth = 800;
