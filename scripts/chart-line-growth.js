@@ -24,7 +24,7 @@ export async function drawRidershipLineChart() {
 
         const colorScale = d3.scaleOrdinal()
             .domain(data.map(d => d.corridor))
-            .range(["#e11845", "#f2ca19", "#8931EF", "#87E911", "#0057e9", "#ff00bd"]);
+            .range(["#ef1b23", "#f8a61b", "#f2ca19", "#51b449", "#0d9bd7", "#913f99"]);
 
         svg.append("g")
             .attr("class", "axis")
