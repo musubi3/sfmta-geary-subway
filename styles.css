@@ -1,3 +1,9 @@
+.content>* {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
 .content .project-header { animation-delay: 0.2s; }
 .content .project-toc { animation-delay: 0.4s; }
 .content .project-section { animation-delay: 0.5s; }
