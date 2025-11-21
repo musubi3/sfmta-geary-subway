@@ -122,6 +122,12 @@ export async function drawDensityMap() {
         .on("mouseover", handleMouseOver)
         .on("mouseleave", handleMouseLeave);
 
+    svg.on("click", (event) => {
+        if (event.target.tagName === 'svg' || event.target.getAttribute('id') === 'sf-map') {
+            handleMouseLeave();
+        }
+    });
+
     const railLayer = svg.append("g").attr("id", "rail-layer");
     railLayer.selectAll("path").data(railData.features).join("path").attr("d", pathGenerator)
         .style("fill", "none").style("stroke", "#555").style("stroke-width", "2px")

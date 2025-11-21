@@ -329,3 +329,47 @@ svg {
 #crowding-chart {
     max-width: 800px; 
 }
+
+@media (max-width: 768px) {
+  #map-container {
+    width: auto;
+    max-width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-sizing: border-box; 
+    
+    padding: 1em 0.5em;
+  }
+
+  .map-view-toggle {
+    width: 90%;
+    display: flex;
+  }
+  
+  .map-view-toggle label {
+    flex: 1;
+    text-align: center;
+  }
+
+  .map-toggles {
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 12px;
+    margin-bottom: 1em;
+    width: 80%;
+  }
+
+  #legend {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .tract {
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+  }
+}
