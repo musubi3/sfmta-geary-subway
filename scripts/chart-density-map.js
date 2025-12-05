@@ -154,7 +154,10 @@ export async function drawDensityMap() {
 
         const legendItems = legend.append("div")
             .style("display", "flex")
-            .style("flex-direction", "row");
+            .style("flex-direction", "row")
+            .style("flex-wrap", "wrap")  
+            .style("justify-content", "center") 
+            .style("gap", "4px");
 
         legendItems.append("div")
             .attr("class", "legend-item")
