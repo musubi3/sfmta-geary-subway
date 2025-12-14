@@ -28,15 +28,20 @@ A bar chart ranking routes by peak-hour crowding, identifying the 38R as a syste
 ## 🛠️ Tech Stack
 
 ### Frontend & Visualization
-* **D3.js (v7):** Used for all data visualizations, including the interactive map, SVG generation, scales, and axes.
-* **HTML5/CSS3:** Semantic HTML structure with a responsive, dark-mode compatible design using CSS variables and Flexbox.
-* **JavaScript (ES6):** Modular architecture (`type="module"`) separating chart logic into distinct files.
+* **D3.js (v7):**<br>Used for all data visualizations, including the interactive map, SVG generation, scales, and axes.
+
+* **HTML5/CSS3:**<br>Semantic HTML structure with a responsive, dark-mode compatible design using CSS variables and Flexbox.
+
+* **JavaScript (ES6):**<br>Modular architecture (`type="module"`) separating chart logic into distinct files.
 
 ### Data Engineering & Processing
-* **Python:** Used for ETL (Extract, Transform, Load) processes.
-* **Pandas:** Used for cleaning ridership CSVs, aggregating route data into corridors, and handling time-series calculations.
-* **GeoPandas:** Used for merging census demographic data with geometric shapefiles and calculating population density per square mile.
-* **Jupyter Notebooks:** Used for exploratory data analysis (EDA).
+* **Python:**<br>Used for ETL (Extract, Transform, Load) processes.
+
+* **Pandas:**<br>Used for cleaning ridership CSVs, aggregating route data into corridors, and handling time-series calculations.
+
+* **GeoPandas:**<br>Used for merging census demographic data with geometric shapefiles and calculating population density per square mile.
+
+* **Jupyter Notebooks:**<br>Used for exploratory data analysis (EDA).
 
 ## 📂 Data Sources
 
