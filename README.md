@@ -1,11 +1,14 @@
 # 44,000 Riders, Zero Trains: A Case for the Geary Subway
+### Personal Project
 
 **A data-driven analysis proving why the Geary corridor is the most underserved transit route in San Francisco.**
 
 This project uses interactive geospatial mapping and statistical visualization to argue that the Geary bus corridor, serving over 44,000 daily riders, has outgrown its current infrastructure and requires a high-capacity subway line.
 
-## 🚀 Live Demo
 🔗 **[View the Live Project Here](https://musubi3.github.io/sfmta-geary-subway/)**
+
+---
+
 ## 📊 Project Overview
 
 The analysis is structured into four key data stories:
