@@ -332,6 +332,22 @@ svg {
     max-width: 800px; 
 }
 
+.tech-tags {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    box-shadow: 0 4px 12px var(--skill-shadow);
+    transform: translateY(-2px) !important;
+}
+
 @media (max-width: 768px) {
   #map-container {
     width: auto;
