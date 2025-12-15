@@ -4,9 +4,17 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.content .project-header { animation-delay: 0.2s; }
-.content .project-toc { animation-delay: 0.4s; }
-.content .project-section { animation-delay: 0.5s; }
+.content .project-header {
+  animation-delay: 0.2s;
+}
+
+.content .project-toc {
+  animation-delay: 0.4s;
+}
+
+.content .project-section {
+  animation-delay: 0.5s;
+}
 
 
 @keyframes fadeInUp {
@@ -19,7 +27,7 @@
 #map-container {
   display: flex;
   flex-direction: column;
-  align-items: center;    
+  align-items: center;
   margin-top: 20px;
   flex-wrap: wrap;
   background-color: var(--card);
@@ -62,7 +70,7 @@ svg#sf-map {
 
 #legend {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 20px;
   margin-left: 0;
   flex-shrink: 0;
@@ -71,7 +79,9 @@ svg#sf-map {
 .legend-title {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.7em;
+  text-align: center;
+  width: 100%;
 }
 
 .legend-item {
@@ -266,9 +276,9 @@ svg#sf-map {
   display: flex;
   margin-bottom: 1.5em;
   border: 1px solid var(--card-border);
-   box-shadow: 0 2px 6px var(--card-shadow);
+  box-shadow: 0 2px 6px var(--card-shadow);
   border-radius: 8px;
-  overflow: hidden; 
+  overflow: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -277,11 +287,12 @@ svg#sf-map {
 }
 
 .map-view-toggle label {
-  display: block; 
+  display: block;
   border-left: 1px solid var(--card-border);
 }
+
 .map-view-toggle label:first-child {
-  border-left: none; 
+  border-left: none;
 }
 
 .map-view-toggle label span {
@@ -296,7 +307,7 @@ svg#sf-map {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.map-view-toggle input[type="radio"]:checked + span {
+.map-view-toggle input[type="radio"]:checked+span {
   background-color: var(--color-accent);
   color: black;
 }
@@ -329,35 +340,35 @@ svg {
 #ridership-chart,
 #ridership-line-chart,
 #crowding-chart {
-    max-width: 800px; 
+  max-width: 800px;
 }
 
 .tech-tags {
-    display: flex;
-    gap: 0.5em;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .tag {
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .tag:hover {
-    box-shadow: 0 4px 12px var(--skill-shadow);
-    transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px var(--skill-shadow);
+  transform: translateY(-2px) !important;
 }
 
 @media (max-width: 768px) {
   #map-container {
     width: auto;
     max-width: 100%;
-    
+
     margin-left: auto;
     margin-right: auto;
-    
-    box-sizing: border-box; 
-    
+
+    box-sizing: border-box;
+
     padding: 1em 0.5em;
   }
 
@@ -365,7 +376,7 @@ svg {
     width: 90%;
     display: flex;
   }
-  
+
   .map-view-toggle label {
     flex: 1;
     text-align: center;
@@ -373,7 +384,7 @@ svg {
 
   .map-toggles {
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 12px;
     margin-bottom: 1em;
     width: 80%;
@@ -384,6 +395,14 @@ svg {
     justify-content: center;
     gap: 10px;
     padding: 0 10px;
+  }
+
+  .legend-title {
+    margin-bottom: 0;
+  }
+
+  .legend-label {
+    font-size: 7.3px;
   }
 
   .tract {
